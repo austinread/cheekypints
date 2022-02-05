@@ -1,0 +1,20 @@
+{
+    "beers": [
+        {
+            "empty" : "true",
+            "name" : "Slagathor",
+            "style" : "Porter",
+            "abv": "6.0",
+            "desc": "This beer is a very very good beer, and requires multiple lines of excellent praise to fully encompass just how good it is, and also to test out wrapping lines and I am a huge tool",
+            "art": "./img/urlhere.png"
+        },
+        {
+            "empty" : "true",
+            "name" : "Potassium Buttassium",
+            "style" : "Banana IPA",
+            "abv": "4.0",
+            "desc": "This beer is a very very good beer, and requires multiple lines of excellent praise to fully encompass just how good it is, and also to test out wrapping lines and I am a huge tool",
+            "art": "./img/urlhere.png"
+        }
+    ]
+}
