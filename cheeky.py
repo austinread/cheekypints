@@ -6,23 +6,26 @@ from tkinter import ttk
 
 import time
 
+bg_color="#333333"
+text_color="#EEEEEE"
+
 root = Tk()
 root.title("Cheeky Pints")
 root.columnconfigure(0, weight=1)
 root.rowconfigure(0, weight=1)
+root.configure(background=bg_color)
 root.geometry("1280x720")
 
-main_frame = ttk.Frame(root, padding="3 3 12 12")
-main_frame = ttk.Frame(root, padding="3 3 12 12")
+main_frame = Frame(root, background=bg_color)
 main_frame.grid(column=0, row=0, sticky="N")
 
-header_img = pil_Image.open("./img/wilkommen.png").resize((800,60))
+header_img = pil_Image.open("./img/wilkommen.png").resize((1000,75))
 header_img = ImageTk.PhotoImage(header_img)
-header = Label(main_frame, text="")
+header = Label(main_frame, text="", background=bg_color)
 header["image"] = header_img
-header.grid(column = 1, row = 1)
+header.grid(column = 1, row = 1, pady=(25, 0))
 
-beers_frame = ttk.Frame(main_frame, padding="0 25")
+beers_frame = Frame(main_frame, bg=bg_color)
 beers_frame.grid(column=1, row=2)
 
 def update_loop():
@@ -35,17 +38,17 @@ def update_loop():
                 widget.destroy()
 
             for i, beer in enumerate(beers):
-                art = Label(beers_frame, text="")
+                art = Label(beers_frame, text="", border="5", background=bg_color)
                 art["image"] = beer.art
-                art.grid(column=i+1,row=1, padx=50)
+                art.grid(column=i+1,row=1, padx=100, pady=(25, 0))
 
-                name = Label(beers_frame, text=beer.name, font=("Arial", 25))
+                name = Label(beers_frame, text=beer.name, wraplength=400, font=("Helvetica", 25), background=bg_color, fg=text_color)
                 name.grid(column=i+1, row=2)
 
-                sub = Label(beers_frame, text=beer.subtitle, font=("Arial", 20))
+                sub = Label(beers_frame, text=beer.subtitle, wraplength=400, font=("Helvetica", 20), background=bg_color, fg=text_color)
                 sub.grid(column=i+1, row=3)
 
-                desc = Label(beers_frame, text=beer.desc, wraplength=300, font=("Arial", 15))
+                desc = Label(beers_frame, text=beer.desc, wraplength=300, font=("Helvetica", 15), background=bg_color, fg=text_color)
                 desc.grid(column=i+1, row=4)
         
         time.sleep(5)
