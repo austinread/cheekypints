@@ -8,6 +8,7 @@ import time
 
 bg_color="#333333"
 text_color="#EEEEEE"
+font = "Helvetica"
 
 root = Tk()
 root.title("Cheeky Pints")
@@ -42,13 +43,13 @@ def update_loop():
                 art["image"] = beer.art
                 art.grid(column=i+1,row=1, padx=100, pady=(25, 0))
 
-                name = Label(beers_frame, text=beer.name, wraplength=400, font=("Helvetica", 25), background=bg_color, fg=text_color)
+                name = Label(beers_frame, text=beer.name, wraplength=400, font=(font, 25), background=bg_color, fg=text_color)
                 name.grid(column=i+1, row=2)
 
-                sub = Label(beers_frame, text=beer.subtitle, wraplength=400, font=("Helvetica", 20), background=bg_color, fg=text_color)
+                sub = Label(beers_frame, text=beer.subtitle, wraplength=400, font=(font, 20), background=bg_color, fg=text_color)
                 sub.grid(column=i+1, row=3)
 
-                desc = Label(beers_frame, text=beer.desc, wraplength=300, font=("Helvetica", 15), background=bg_color, fg=text_color)
+                desc = Label(beers_frame, text=beer.desc, wraplength=300, font=(font, 15), background=bg_color, fg=text_color)
                 desc.grid(column=i+1, row=4)
         
         time.sleep(5)
