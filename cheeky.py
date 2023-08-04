@@ -6,7 +6,7 @@ from tkinter import ttk
 
 import time
 
-bg_color="#333333"
+bg_color="#4a301e"
 text_color="#EEEEEE"
 font = "Helvetica"
 
@@ -15,12 +15,12 @@ root.title("Cheeky Pints")
 root.columnconfigure(0, weight=1)
 root.rowconfigure(0, weight=1)
 root.configure(background=bg_color)
-root.geometry("1280x720")
+root.geometry("1440x900")
 
 main_frame = Frame(root, background=bg_color)
 main_frame.grid(column=0, row=0, sticky="N")
 
-header_img = pil_Image.open("./img/wilkommen.png").resize((1000,75))
+header_img = pil_Image.open("./img/menuheader.png").resize((1000,150))
 header_img = ImageTk.PhotoImage(header_img)
 header = Label(main_frame, text="", background=bg_color)
 header["image"] = header_img
