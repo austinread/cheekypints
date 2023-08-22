@@ -18,7 +18,7 @@ class Beer:
             self.desc = data["desc"]
             self.art_path = data["art"]
             
-        image = Image.open(self.art_path).resize((237,273))
+        image = Image.open(self.art_path).resize((435,500))
         self.art = ImageTk.PhotoImage(image)
 
     def __eq__(self, other):
