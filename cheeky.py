@@ -9,6 +9,7 @@ import time
 bg_color="#4a301e"
 text_color="#EEEEEE"
 font = "Helvetica"
+#font = "KG Broken Vessels Sketch"
 
 root = Tk()
 root.title("Cheeky Pints")
